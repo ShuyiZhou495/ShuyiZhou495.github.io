@@ -97,7 +97,17 @@ header.site-header { position: sticky; top: 0; backdrop-filter: blur(8px); backg
 }
 .media.yt .yt-slot { position: absolute; inset: 0; }
 .media.yt.is-playing .yt-thumb { opacity: 0; }
+.media.yt .yt-thumb { position:absolute; inset:0; z-index:0; }
+.media.yt .yt-slot  { position:absolute; inset:0; z-index:1; }
+.media.yt .yt-slot iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
 
+/* 关键：透明屏蔽层，阻断鼠标进入 iframe，从而不显示顶部灰色标题条 */
+.media.yt .yt-shield { position:absolute; inset:0; z-index:3; background:transparent; pointer-events:auto; }
+
+/* 播放按钮与播放时缩略图淡出 */
+.media.yt .yt-play { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:2; }
+.media.yt.is-playing .yt-thumb { opacity:0; }
+.media.yt.is-playing .yt-play  { opacity:0; pointer-events:none; }
 
 .pub-meta {
   display: grid;
