@@ -1,0 +1,268 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shuyi Zhou – Personal Page</title>
+  <meta name="description" content="Shuyi Zhou: Personal homepage" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+
+  <main class="container">
+    <!-- ===== Hero ===== -->
+    <section id="about" class="section" aria-label="About">
+      <div class="hero">
+        <div class="avatar">
+          <img src="assets/self.jpg" alt="Portrait of Shuyi Zhou" loading="lazy" />
+        </div>
+        <div>
+          <h1 class="title">Shuyi Zhou（周舒意）</h1>
+          <p class="subtitle muted">Ph.D. candidate @ the University of Tokyo · Member of
+            <a href="https://www.cvl.iis.u-tokyo.ac.jp/" target="_blank" rel="noreferrer">Oishi Lab</a>
+            · Research interests: 3D vision, LiDAR–camera fusion</p>
+          <div class="links">
+            <span class="chip">zhoushuyi495@gmail.com</span>
+            <a class="chip" href="https://github.com/ShuyiZhou495" target="_blank" rel="noreferrer">GitHub</a>
+            <!-- <a class="chip" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a> -->
+            <a class="chip" href="assets/CV_1page.pdf" target="_blank" rel="noreferrer">CV</a>
+          </div>
+        </div>
+      </div>
+      <p>
+        I am a Ph.D. candidate at the The University of Tokyo, advised by Prof. Takeshi Oishi.
+        I received my Master's degree from The University of Tokyo in 2023 and my Bachelor of Science degree (Electrical and Computer Engineering) from Shanghai Jiao Tong University (UM-SJTU Joint Institute) in 2021.
+      </p>
+      <p>
+        My research focuses on 3D vision, particularly sensor fusion and differentiable rendering techniques such as Gaussian Splatting and Neural Radiance Fields (NeRF).
+        I excel at developing innovative algorithms that enhance 3D reconstruction and scene understanding from multi-modal data sources.
+      </p>
+      <p>
+        <strong>I am looking for full-time job opportunities from Oct. 2026.</strong>
+      </p>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section id="publications" class="section" aria-label="Publications">
+      <h2>Publications</h2>
+      <div class="pub-list">
+        <article class="pub-card">
+          <div class="media yt" data-youtube-id="ahnoNwaP2xQ">
+            <img class="yt-thumb"
+                src="https://i.ytimg.com/vi/ahnoNwaP2xQ/hqdefault.jpg"
+                alt="Video teaser" loading="lazy" />
+            <div class="yt-slot" aria-hidden="true"></div>
+            </div>
+          <div>
+            <h3 class="paper-title">DeMapGS: Simultaneous Mesh Deformation and Surface Attribute Mapping via Gaussian Splatting</h3>
+            <div class="pub-meta">
+              <span class="venue">SIGGRAPH Asia 2025</span>
+              <span class="muted">|</span>
+              <span class="muted"><strong>Shuyi Zhou</strong>, Shengze Zhong, Kenshi Takayama, Takafumi Taketomi, Takeshi Oishi</span>
+            </div>
+            <p class="muted">A structured Gaussian splatting framework enabling mesh deformation and editable attribute mapping.</p>
+            <div class="pub-links">
+              <a href="https://dl.acm.org/doi/10.1145/3757377.3763860" target="_blank">Paper</a>
+              <a href="https://shuyizhou495.github.io/DeMapGS-project-page/" target="_blank">Project</a>
+              <a href="https://www.youtube.com/watch?v=kec0RfZ_FCw&embeds_referring_euri=https%3A%2F%2Fshuyizhou495.github.io%2F&source_ve_path=Mjg2NjY" target="_blank">Video</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+        <div class="media yt" data-youtube-id="ZYliXSccg0w">
+            <img class="yt-thumb"
+                src="https://i.ytimg.com/vi/ZYliXSccg0w/hqdefault.jpg"
+                alt="Video teaser" loading="lazy" />
+            <div class="yt-slot" aria-hidden="true"></div>
+        </div>
+          <div>
+            <h3 class="paper-title">Robust LiDAR-Camera Calibration with 2D Gaussian Splatting</h3>
+            <div class="pub-meta">
+              <span class="venue">Ra-L 2025</span>
+              <!-- <span class="venue">IROS 2025</span> -->
+              <span class="muted">|</span>
+              <span class="muted"><strong>Shuyi Zhou</strong>, Shuxiang Xie, Ryoichi Ishikawa, Takeshi Oishi
+            </div>
+            <p class="muted">A targetless LiDAR-camera calibration method that consolidates various geometric constraints based on 2DGS.</p>
+            <div class="pub-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10933576" target="_blank">Paper</a>
+              <a href="https://shuyizhou495.github.io/RobustCalibration-page/" target="_blank">Project</a>
+              <a href="https://www.youtube.com/watch?v=ZYliXSccg0w" target="_blank">Video</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+            
+        <div class="media yt" data-youtube-id="OoVaK1b2SOs">
+            <img class="yt-thumb"
+                src="https://i.ytimg.com/vi/OoVaK1b2SOs/hqdefault.jpg"
+                alt="Video teaser" loading="lazy" />
+            <div class="yt-slot" aria-hidden="true"></div>
+        </div>
+          <div>
+            <h3 class="paper-title">G<sup>2</sup>fR: Frequency Regularization in Grid-based Feature Encoding Neural Radiance Fields</h3>
+            <div class="pub-meta">
+              <span class="venue">ECCV 2024</span>
+              <span class="muted">|</span>
+              <span class="muted">Shuxiang Xie, <strong>Shuyi Zhou</strong>, Ken Sakurada, Ryoichi Ishikawa, Masaki Onishi, and Takeshi Oishi</span>
+            </div>
+            <p class="muted">Generalized frequency regularization method for grid-based implicit representations (e.g., Instant-NGP), analyzing their mathematical principles and frequency behavior.</p>
+            <div class="pub-links">
+              <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03259.pdf" target="_blank">Paper</a>
+              <a href="https://www.youtube.com/watch?v=atR3cK_Y86I" target="_blank">Video</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-card">
+          <div class="media contain">
+            <img src="assets/color.png" alt="Teaser" loading="lazy" />
+          </div>
+          <div>
+            <h3 class="paper-title">LiDAR-Camera Calibration using Intensity Variance Cost</h3>
+            <div class="pub-meta">
+              <span class="venue">ICRA 2024</span>
+              <span class="muted">|</span>
+              <span class="muted">Ryoichi Ishikawa, <strong>Shuyi Zhou</strong>, Yoshihiro Sato, Takeshi Oishi, Katsushi Ikeuchi</span>
+            </div>
+            <p class="muted">A targetless LiDAR-camera calibration applicable even to 1D LiDAR using the cost function based on intensity variance.</p>
+            <div class="pub-links">
+              <a href="https://www.cvl.iis.u-tokyo.ac.jp/data/uploads/papers/Ishikawa_LiDAR_Camera_Calibration_ICRA2024.pdf" target="_blank">Paper</a>
+            </div>
+          </div>
+        </article>
+
+    <article class="pub-card">
+         <div class="media yt" data-youtube-id="F1t454auZDI">
+            <img class="yt-thumb"
+                src="https://i.ytimg.com/vi/F1t454auZDI/hqdefault.jpg"
+                alt="Video teaser" loading="lazy" />
+            <div class="yt-slot" aria-hidden="true"></div>
+        </div>
+          <div>
+            <h3 class="paper-title">INF: Implicit Neural Fusion for LiDAR and Camera</h3>
+            <div class="pub-meta">
+              <span class="venue">IROS 2023</span>
+              <span class="muted">|</span>
+              <span class="muted"><strong>Shuyi Zhou</strong>, Shuxiang Xie, Ryoichi Ishikawa, Ken Sakurada, Masaki Onishi, Takeshi Oishi</span>
+            </div>
+            <p class="muted">Implicit neural representations with diverse sensor inputs to achieve robust sensor fusion and calibration.</p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2308.14414" target="_blank">Paper</a>
+              <a href="https://shuyizhou495.github.io/inf-project-page/" target="_blank">Project</a>
+              <a href="https://www.youtube.com/watch?v=I1MJ_tUdNB4" target="_blank">Video</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Experience (Timeline) ===== -->
+    <section id="experience" class="section" aria-label="Experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-title">Research Engineer Intern, T2 Inc.</div>
+          <div class="t-meta">2025.08 – 2025.09 · Tokyo, Japan</div>
+          <p class="muted">Sensor fusion, Autonomous driving.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-title">Research Intern, CyberAgent AI Lab</div>
+          <div class="t-meta">2024.08 – 2025.07 · Tokyo, Japan</div>
+          <p class="muted">Gaussian Splatting, Mesh Reconstruction, Digital human.</p>
+        </div>
+        <div class="t-item">
+          <div class="t-title">Research Assistant, The National Institute of Advanced Industrial Science and Technology (AIST)</div>
+          <div class="t-meta">2022.06 – 2023.08 · Tokyo, Japan</div>
+          <p class="muted">Sensor fusion, NeRF.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Awards ===== -->
+    <section id="awards" class="section" aria-label="Awards">
+      <h2>Awards</h2>
+      <div class="awards">
+        <div class="award">
+          <div class="year">2025</div>
+          <div>MIRU Student Encouraging Award</div>
+        </div>
+        <div class="award">
+          <div class="year">2024</div>
+          <div>MIRU Excellence Award</div>
+        </div>
+        <div class="award">
+          <div class="year">2023</div>
+          <div>MIRU Student Encouraging Award</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section">
+      <p class="muted">© <span id="year"></span> Shuyi Zhou. Last updated on <time id="updated">Dec 2025</time>.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+  window.__ytReadyCbs = [];
+  window.onYouTubeIframeAPIReady = function(){
+    (window.__ytReadyCbs||[]).forEach(fn=>{ try{fn();}catch(e){} });
+    window.__ytReadyCbs = [];
+  };
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  const blocks  = document.querySelectorAll('.media[data-youtube-id]');
+  const players = new Map();
+  function whenYTReady(cb){
+    if (window.YT && YT.Player) cb();
+    else (window.__ytReadyCbs = window.__ytReadyCbs || []).push(cb);
+  }
+  function createPlayer(block){
+    if (players.has(block)) return players.get(block);
+    const vid  = block.dataset.youtubeId;
+    const slot = block.querySelector('.yt-slot');
+    const p = new YT.Player(slot, {
+      videoId: vid,
+      playerVars: { autoplay: 0, controls: 0, rel: 0, mute: 1, playsinline: 1, modestbranding: 1 }
+    });
+    players.set(block, p);
+    return p;
+  }
+  function play(block){
+    const p = players.get(block) || createPlayer(block);
+    try { p.mute(); p.playVideo(); } catch(_) {}
+    block.classList.add('is-playing');
+  }
+  function pause(block){
+    const p = players.get(block);
+    if (p) try { p.pauseVideo(); } catch(_) {}
+    block.classList.remove('is-playing');
+  }
+  blocks.forEach(block=>{
+    block.addEventListener('mouseenter', ()=> whenYTReady(()=> play(block)));
+    block.addEventListener('mouseleave', ()=> whenYTReady(()=> pause(block)));
+    block.addEventListener('click', (e)=>{
+      e.preventDefault();
+      whenYTReady(()=> block.classList.contains('is-playing') ? pause(block) : play(block));
+    });
+  });
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver(ents=>{
+      ents.forEach(ent=>{ if (!ent.isIntersecting) pause(ent.target); });
+    }, { threshold: 0.1 });
+    blocks.forEach(b=> io.observe(b));
+  }
+</script>
+</body>
+</html>
+
+
