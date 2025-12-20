@@ -143,8 +143,6 @@
                 src="https://i.ytimg.com/vi/F1t454auZDI/hqdefault.jpg"
                 alt="Video teaser" loading="lazy" />
             <div class="yt-slot" aria-hidden="true"></div>
-            <div class="yt-shield" aria-hidden="true"></div>
-            <button class="yt-play" aria-hidden="true" title="Play teaser">▶</button>
         </div>
           <div>
             <h3 class="paper-title">INF: Implicit Neural Fusion for LiDAR and Camera</h3>
@@ -224,45 +222,40 @@
 <script>
   const blocks  = document.querySelectorAll('.media[data-youtube-id]');
   const players = new Map();
+
   function whenYTReady(cb){
     if (window.YT && YT.Player) cb();
     else (window.__ytReadyCbs = window.__ytReadyCbs || []).push(cb);
   }
-  function createPlayer(block){
-    if (players.has(block)) return players.get(block);
+
+  function createAndAutoplay(block){
+    if (players.has(block)) return;
     const vid  = block.dataset.youtubeId;
     const slot = block.querySelector('.yt-slot');
+
     const p = new YT.Player(slot, {
       videoId: vid,
-      playerVars: { autoplay: 0, controls: 0, rel: 0, mute: 1, playsinline: 1, modestbranding: 1 }
+      playerVars: {
+        autoplay: 1,   
+        mute: 1,         
+        playsinline: 1,  
+        controls: 0,
+        rel: 0,
+        modestbranding: 1,
+        loop: 1,        
+        playlist: vid
+      }
     });
+
+    p.addEventListener('onReady', () => {
+      try { p.mute(); p.playVideo(); } catch(_) {}
+      block.classList.add('is-playing'); 
+    });
+
     players.set(block, p);
-    return p;
   }
-  function play(block){
-    const p = players.get(block) || createPlayer(block);
-    try { p.mute(); p.playVideo(); } catch(_) {}
-    block.classList.add('is-playing');
-  }
-  function pause(block){
-    const p = players.get(block);
-    if (p) try { p.pauseVideo(); } catch(_) {}
-    block.classList.remove('is-playing');
-  }
-  blocks.forEach(block=>{
-    block.addEventListener('mouseenter', ()=> whenYTReady(()=> play(block)));
-    block.addEventListener('mouseleave', ()=> whenYTReady(()=> pause(block)));
-    block.addEventListener('click', (e)=>{
-      e.preventDefault();
-      whenYTReady(()=> block.classList.contains('is-playing') ? pause(block) : play(block));
-    });
-  });
-  if ('IntersectionObserver' in window){
-    const io = new IntersectionObserver(ents=>{
-      ents.forEach(ent=>{ if (!ent.isIntersecting) pause(ent.target); });
-    }, { threshold: 0.1 });
-    blocks.forEach(b=> io.observe(b));
-  }
+
+  whenYTReady(() => { blocks.forEach(createAndAutoplay); });
 </script>
 </body>
 </html>
